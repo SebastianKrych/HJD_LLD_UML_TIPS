@@ -1,0 +1,61 @@
+==============HLD and LLD============== System design concepts
+HLD - High Level Disign
+Gather all requirements
+functional and non faction requirments
+costing limitations
+
+
+discuss -> think -> take an approach PoC -> repeat
+
+
+trade offs, pros and cones
+
+
+Think about future of the project/feature
+
+
+
+LLD - Low Layer Design
+draw a class diagram UML - Universal Modeling Language
+outcame might be design simple code system
+optimization
+performance
+testing
+
+
+
+
+UML links
+live: https://www.planttext.com/
+documentation: https://plantuml.com/class-diagram
+
+
+Example UML:
+@startuml
+
+abstract class Animal {
++name
+-age
++{abstract} eat()
++walk()
+}
+
+class Cat
+
+class Dog {
++bark()
+}
+
+class AnimalManager {
++getAllAnimals()
+}
+
+class AnimalUtil {
++countAllAnimals()
+}
+
+
+AnimalManager *-- AnimalUtil
+Animal <|-- Cat
+Animal <|-- Dog
+@enduml
